@@ -10,7 +10,7 @@ class FiltroPaises {
       this.formato = this.defaultFormato;
       this.filtros = [];
       try {
-        const response = await fetch("https://restcountries.com/v3.1/all");
+        const response = await fetch("https://restcountries.com/v3.1/all?fields=subregion,name,capital,population,languages,borders");
         this.data = await response.json();
       } catch (ex) {
         console.log(ex.message);
